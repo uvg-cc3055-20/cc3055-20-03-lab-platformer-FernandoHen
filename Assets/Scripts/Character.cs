@@ -9,9 +9,13 @@ public class Character : MonoBehaviour {
     SpriteRenderer sr;
     public Camera cam;
     private float speed = 5f;
-    private float jumpForce = 250f;
+    private float jumpForce = 230f;
     private bool facingRight = true;
     Animator anim;
+
+
+
+
     // Use this for initialization
     void Start () {
         rb2d = GetComponent<Rigidbody2D>();
@@ -33,7 +37,10 @@ public class Character : MonoBehaviour {
 
         if (Input.GetButtonDown("Jump")) {
             rb2d.AddForce(Vector2.up*jumpForce);
-        }
+
+           
+
+}
         anim.SetFloat("Speed", Mathf.Abs(move));
 
 	}
